@@ -1,5 +1,5 @@
 import React from "react";
-// import { Card, CardHeader, CardBody, CardFooter } from '@shadcn/ui'
+import { Link } from "react-router-dom";
 
 function ProjectCard({ project }) {
   const {
@@ -8,14 +8,14 @@ function ProjectCard({ project }) {
     date,
     projectImage,
     profilePicture,
-    category,
     contributors,
     tags,
     description,
   } = project;
 
   return (
-    <div className="w-full h-auto bg-[#F5F5F5] rounded-[16px] flex flex-col items-center gap-4 overflow-hidden">
+    <Link to={`/project/${project.id}`}>
+    <div className="w-full h-auto bg-[#F5F5F5] rounded-[16px] flex flex-col items-center gap-4 overflow-hidden shadow-sm transition-transform duration-300 hover:scale-105 cursor-pointer">
       {/* project image */}
       <div className="w-full h-[200px] rounded-t-[16px] overflow-hidden">
         <img
@@ -97,6 +97,7 @@ function ProjectCard({ project }) {
         </div>
       </div>
     </div>
+    </Link>
   );
 }
 

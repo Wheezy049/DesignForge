@@ -8,20 +8,20 @@ function Footer() {
 
         <div className="flex justify-between items-center w-full">
           <img src="/images/DesignForge.png" alt="logo" className="h-8" />
-          <div className="flex items-center gap-4 text-gray-700">
-            <a href="/" className="hover:text-gray-900"><FaFacebook /></a>
-            <a href="/" className="hover:text-gray-900"><FaTwitter /></a>
-            <a href="/" className="hover:text-gray-900"><FaInstagram /></a>
-            <a href="/" className="hover:text-gray-900"><FaLinkedin /></a>
+          <div className="flex items-center gap-2 text-gray-700">
+            <a href="/" className="hover:text-gray-900 w-6 h-6"><FaFacebook /></a>
+            <a href="/" className="hover:text-gray-900 w-6 h-6"><FaTwitter /></a>
+            <a href="/" className="hover:text-gray-900 w-6 h-6"><FaInstagram /></a>
+            <a href="/" className="hover:text-gray-900 w-6 h-6"><FaLinkedin /></a>
           </div>
         </div>
 
         <div className="flex justify-between items-center w-full">
-          <div className="flex gap-6 text-[#344054] text-base font-semibold">
+          <div className="flex gap-6 text-[#344054] text-base font-semibold font-inter">
             <a href="/" className="hover:text-gray-900">Privacy Policy</a>
             <a href="/" className="hover:text-gray-900">Terms of Use</a>
           </div>
-          <div className="text-[#344054] text-base">© 2025. All Rights Reserved.</div>
+          <div className="text-[#344054] text-base font-semibold font-inter">© 2025. All Rights Reserved.</div>
         </div>
 
       </div>

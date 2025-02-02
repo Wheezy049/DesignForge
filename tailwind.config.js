@@ -7,6 +7,7 @@ module.exports = {
         jackFrost: ["JackFrost", "sans-serif"],
         darkerGrotesque: ["DarkerGrotesque", "sans-serif"],
         manrope: ["Manrope", "sans-serif"],
+        inter: ["Inter", "sans-serif"],
       },
     },
   },
