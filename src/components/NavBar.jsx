@@ -24,7 +24,7 @@ function NavBar() {
     >
       <div className="max-w-[1200px] mx-auto flex justify-between items-center px-4">
         <div>
-          <img src="/images/DesignForge.png" alt="logo" />
+          <img src="/images/DesignForge.svg" alt="logo" />
         </div>
         <div className="flex gap-4 text-base font-bold">
           <button className="flex justify-center px-6 py-3 items-center border border-[#1A1B1C] text-[#1A1B1C] rounded-lg hover:bg-[#f0f0f0] cursor-pointer transition-all duration-300">

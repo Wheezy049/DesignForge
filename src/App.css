@@ -32,6 +32,7 @@
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
@@ -39,30 +40,28 @@
 
 @font-face {
   font-family: "Jack Frost";
-  src: url("/fonts/JackFrost.otf") format("opentype"); 
+  src: url("/fonts/JackFrost.otf") format("opentype");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: "Darker Grotesque";
-  src: url("/fonts/DarkerGrotesque.ttf") format("truetype"); 
+  src: url("/fonts/DarkerGrotesque.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: "Manrope";
-  src: url("/fonts/Manrope.ttf") format("truetype"); 
+  src: url("/fonts/Manrope.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: "Inter";
-  src: url("/fonts/Inter.ttf") format("truetype"); 
+  src: url("/fonts/Inter.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
-
-/* Hide scrollbar for WebKit browsers (Chrome, Safari) */
