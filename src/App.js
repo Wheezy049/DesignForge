@@ -2,6 +2,8 @@ import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import HomePage from "./pages/HomePage";
 import ProjectDetail from "./pages/ProjectDetail";
+import SignUp from "./pages/Signup";
+import SignIn from "./pages/SignIn";
 
 const projects = [
   {
@@ -132,6 +134,8 @@ function App() {
           path="/project/:id"
           element={<ProjectDetail projects={projects} />}
         />
+        <Route path="/signup" element={<SignUp />} />
+        <Route path="/signin" element={<SignIn />} />
       </Routes>
     </Router>
   );
