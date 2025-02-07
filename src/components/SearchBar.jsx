@@ -6,8 +6,8 @@ function SearchBar({ searchQuery, setSearchQuery, selectedTags, clearFilters }) 
   const shouldShowClear = searchQuery.length > 0 || selectedTags.length > 0; 
 
   return (
-    <div className="w-full rounded-[100px] border border-[#D0D5DD] bg-white py-5 px-4 flex justify-between items-center">
-      <div className=" w-full flex gap-3 items-center">
+    <div className="w-full rounded-[100px] border border-[#D0D5DD] bg-white py-3 md:py-5 px-4 flex justify-between items-center">
+      <div className=" w-full flex gap-2 md:gap-3 items-center">
       <Search size={24} color="#667185" />
       <input
         type="text"
@@ -19,12 +19,12 @@ function SearchBar({ searchQuery, setSearchQuery, selectedTags, clearFilters }) 
       </div>
       {shouldShowClear && (
         <div
-          onClick={clearFilters}
-          className="flex gap-2 items-center whitespace-nowrap cursor-pointer text-gray-600 hover:text-gray-800 transition"
-        >
-          <X size={24} />
-          <span>Clear Filters</span>
-        </div>
+        onClick={clearFilters}
+        className="flex gap-2 items-center whitespace-nowrap cursor-pointer text-gray-600 hover:text-gray-800 transition"
+      >
+        <X size={24} />
+        <span className="hidden md:inline">Clear Filters</span>
+      </div>
       )}
     </div>
   );

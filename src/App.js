@@ -4,14 +4,15 @@ import HomePage from "./pages/HomePage";
 import ProjectDetail from "./pages/ProjectDetail";
 import SignUp from "./pages/Signup";
 import SignIn from "./pages/SignIn";
+import Verification from "./pages/Verification";
 
 const projects = [
   {
     id: 1,
     title: "E-commerce Dashboard",
-    author: "Jane Doe",
+    author: "Ikenna Afolayan",
     description:
-      "lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "Create an intuitive user interface for an e-learning platform, focusing on improving course navigation and student engagement.",
     date: "Jan 15, 2024",
     projectImage: "/images/frame.png",
     profilePicture: "/images/image.jpg",
@@ -22,24 +23,24 @@ const projects = [
   {
     id: 2,
     title: "Banking App Interface",
-    author: "Jane Doe",
+    author: "Oluwadamilare Eze",
     description:
       "lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     date: "Jan 15, 2024",
-    projectImage: "/images/frame.png",
+    projectImage: "/images/Frame 3 (1).png",
     profilePicture: "/images/image.jpg",
     category: "Finance",
     contributors: 24,
-    tags: ["Mobile Design", "UI Research"],
+    tags: ["UX Design", "UI Research"],
   },
   {
     id: 3,
     title: "Healthcare Portal",
-    author: "Jane Doe",
+    author: "Emeka Nnamani",
     description:
       "lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     date: "Jan 15, 2024",
-    projectImage: "/images/frame.png",
+    projectImage: "/images/Frame 3 (2).png",
     profilePicture: "/images/image.jpg",
     category: "Healthcare",
     contributors: 18,
@@ -48,50 +49,50 @@ const projects = [
   {
     id: 4,
     title: "Learning Management System",
-    author: "Jane Doe",
+    author: "Babatunde Oludare",
     description:
       "lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     date: "Jan 15, 2024",
-    projectImage: "/images/frame.png",
+    projectImage: "/images/Frame 3 (3).png",
     profilePicture: "/images/image.jpg",
     category: "Education",
     contributors: 15,
-    tags: ["Information Architecture", "UI Design"],
+    tags: ["information Architecture", "UI Design"],
   },
   {
     id: 5,
     title: "Social Media Analytics",
-    author: "Jane Doe",
+    author: "Adebayo Nwosu",
     description:
       "lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     date: "Jan 15, 2024",
-    projectImage: "/images/frame.png",
+    projectImage: "/images/Frame 3 (4).png",
     profilePicture: "/images/image.jpg",
     category: "Social Media",
     contributors: 22,
-    tags: ["Dashboard", "Data Visualization"],
+    tags: ["Dashboard", "Mobile Design"],
   },
   {
     id: 6,
-    title: "Social Media Analytics",
-    author: "Jane Doe",
+    title: "LearnSphere",
+    author: "Chukwu Adeyemi",
     description:
       "lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     date: "Jan 15, 2024",
-    projectImage: "/images/frame.png",
+    projectImage: "/images/Frame 3 (5).png",
     profilePicture: "/images/image.jpg",
     category: "Social Media",
     contributors: 22,
-    tags: ["Dashboard", "Data Visualization"],
+    tags: ["UI Library", "Design Systems"],
   },
   {
     id: 7,
-    title: "Social Media Analytics",
-    author: "Jane Doe",
+    title: "Social Media Dashboard",
+    author:  "Adeyemi Chukwu",
     description:
       "lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     date: "Jan 15, 2024",
-    projectImage: "/images/frame.png",
+    projectImage: "/images/Frame 3 (6).png",
     profilePicture: "/images/image.jpg",
     category: "Social Media",
     contributors: 22,
@@ -99,25 +100,25 @@ const projects = [
   },
   {
     id: 8,
-    title: "Social Media Analytics",
-    author: "Jane Doe",
+    title: "LedgerLink",
+    author: "Ibrahim Damilare",
     description:
       "lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     date: "Jan 15, 2024",
-    projectImage: "/images/frame.png",
+    projectImage: "/images/Frame 3 (4).png",
     profilePicture: "/images/image.jpg",
     category: "Social Media",
     contributors: 22,
-    tags: ["Dashboard", "Data Visualization"],
+    tags: ["Wireframe", "Mobile Design"],
   },
   {
     id: 9,
-    title: "Social Media Analytics",
-    author: "Jane Doe",
+    title: "Shopfront UI Redesign",
+    author: "Tobi Joshua",
     description:
       "lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     date: "Jan 15, 2024",
-    projectImage: "/images/frame.png",
+    projectImage: "/images/Frame 3 (2).png",
     profilePicture: "/images/image.jpg",
     category: "Social Media",
     contributors: 22,
@@ -136,6 +137,7 @@ function App() {
         />
         <Route path="/signup" element={<SignUp />} />
         <Route path="/signin" element={<SignIn />} />
+        <Route path="/verification-code" element={<Verification />} />
       </Routes>
     </Router>
   );
