@@ -4,7 +4,7 @@ import Tag from "./Tag";
 function FormCard() {
   return (
     <div className="bg-white py-8 px-12 flex flex-col gap-6 rounded-[24px] w-full">
-      <h1 className="text-[#1A1B1C] text-[40px] font-semibold font-darkerGrotesque leading-[50px]">
+      <h1 className="text-[#1A1B1C] text-[20px] md:text-[40px]  font-semibold font-darkerGrotesque leading-[50px]">
         Collaborate with experts, contribute to real projects, and level up your
         skills
       </h1>

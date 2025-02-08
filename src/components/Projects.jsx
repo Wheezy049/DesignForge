@@ -21,7 +21,6 @@ function Projects({ projects }) {
     // Match search query
     const matchesSearch = project.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
       project.author.toLowerCase().includes(searchQuery.toLowerCase()) ||
-      project.category.toLowerCase().includes(searchQuery.toLowerCase()) ||
       project.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()));
 
     // Match selected tags (if any tags are selected, filter projects that have at least one matching tag)
@@ -38,12 +37,12 @@ function Projects({ projects }) {
 
 
   return (
-    <div className="flex justify-center gap-4 flex-col items-center w-full max-w-[1200px] mt-[73px] mb-20">
+    <div className="flex justify-center gap-4 flex-col items-center w-full max-w-[1200px] mt-[32px] mb-20">
       <SearchBar searchQuery={searchQuery} setSearchQuery={setSearchQuery} selectedTags={selectedTags} clearFilters={clearFilters}/>
 
       <TagsList selectedTags={selectedTags} toggleTag={toggleTag} />
 
-      <div className="container mx-auto py-8">
+      <div className="container mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {filteredProjects.length > 0 ? (
             filteredProjects.map((project) => (

@@ -9,6 +9,7 @@ function ProjectCard({ project }) {
     projectImage,
     profilePicture,
     contributors,
+    contributorImages,
     tags,
     description,
   } = project;
@@ -17,6 +18,11 @@ function ProjectCard({ project }) {
     { text: "text-[#9747FF]", bg: "bg-[#F4EBFE]" },
     { text: "text-[#379811]", bg: "bg-[#F1FEE9]" },
     { text: "text-[#A77A00]", bg: "bg-[#FBF9E3]" },
+    { text: "text-[#1C1B1F]", bg: "bg-[#EAEAEA]" },
+    { text: "text-[#F418E5]", bg: "bg-[#F4EBFE]" },
+    { text: "text-[#0B6670]", bg: "bg-[#E0FEFD]" },
+    { text: "text-[#FF4747]", bg: "bg-[#FDF1EA]" },
+    { text: "text-[#023691]", bg: "bg-[#E8EAF7]" },
   ];
 
   // Function to shuffle the tag styles
@@ -55,7 +61,7 @@ function ProjectCard({ project }) {
                   className="w-full h-full object-cover"
                 />
               </div>
-              <h3 className="text-base font-medium font-manrope text-[#79818B] leading-[20px] whitespace-nowrap">
+              <h3 className="text-sm font-bold font-manrope text-[#1A1B1C] leading-[20px] whitespace-nowrap">
                 {author}
               </h3>
             </div>
@@ -66,30 +72,31 @@ function ProjectCard({ project }) {
 
           {/* Project Title */}
           <div className="flex flex-col items-start gap-3">
-            <h2 className="text-[20px] font-medium font-inter leading-[24px] text-[#25292E]">
+            <h2 className="text-[20px] font-semibold font-inter leading-[24px] text-[#25292E]">
               {title}
             </h2>
             <p className="text-sm font-normal font-inter leading-[20px] text-[#79818B]">
-              {`${description.slice(0, 100)}...`}
+              {`${description.slice(0, 90)}...`}
             </p>
           </div>
 
           {/* Contributors */}
           <div className="flex items-center justify-between whitespace-nowrap w-full">
-            <div className="flex gap-2 items-center">
-              <div className="flex items-center -space-x-3 mt-1 md:mt-2">
-                {[...Array(3)].map((_, i) => (
+            <div className="flex items-center">
+              <div className="flex items-center -space-x-2 mt-1">
+                {contributorImages.slice(0, 3).map((image, i) => (
                   <img
                     key={i}
-                    src={profilePicture}
+                    src={image}
                     alt="Contributor"
                     className="w-7 h-7 rounded-full border-2 border-white"
                   />
                 ))}
               </div>
-              <div>
-                <span className="text-[12px] font-medium font-inter text-[#79818B] mt-1">
-                  +{contributors} Contributors
+
+              <div className="flex -ml-3 items-center">
+                <span className="text-[12px] font-medium leading-[14px] font-inter mt-1 bg-[#1A1B1C] text-white w-7 h-7 rounded-full flex items-center justify-center">
+                  +{contributors}
                 </span>
               </div>
             </div>
@@ -97,12 +104,13 @@ function ProjectCard({ project }) {
             {/* Tags */}
             <div className="flex gap-2 items-center mt-2">
               {tags.map((tag, index) => {
-                const style = shuffledTagStyles[index % shuffledTagStyles.length];
+                const style =
+                  shuffledTagStyles[index % shuffledTagStyles.length];
 
                 return (
                   <span
                     key={index}
-                    className={`px-2 py-1 ${style.bg} ${style.text} text-[10px] font-semibold font-manrope rounded-[100px]`}
+                    className={`px-2 py-1 ${style.bg} ${style.text} text-[12px] font-medium font-inter leadng-[15px] rounded-[100px]`}
                   >
                     {tag}
                   </span>

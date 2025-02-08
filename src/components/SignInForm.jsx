@@ -8,7 +8,7 @@ function SignInForm() {
   return (
     <form className="bg-white py-8 px-12 flex flex-col gap-6 rounded-[24px] w-full">
         <div>
-      <h1 className="text-[#1A1B1C] text-[40px] font-semibold font-darkerGrotesque leading-[50px] text-center">
+      <h1 className="text-[#1A1B1C] text-[20px] md:text-[40px] font-semibold font-darkerGrotesque leading-[50px] text-center">
         Login into your account
       </h1>
       <p className="text-[#25292E] text-center text-base font-medium font-darkerGrotesque leading-[18px]">Revisit Your Contributions—Your Portfolio Awaits!</p>

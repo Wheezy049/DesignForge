@@ -6,7 +6,7 @@ function SearchBar({ searchQuery, setSearchQuery, selectedTags, clearFilters }) 
   const shouldShowClear = searchQuery.length > 0 || selectedTags.length > 0; 
 
   return (
-    <div className="w-full rounded-[100px] border border-[#D0D5DD] bg-white py-3 md:py-5 px-4 flex justify-between items-center">
+    <div className="w-full rounded-[100px] border border-[#D0D5DD] bg-white py-3 md:py-5 px-4 flex justify-between items-center mb-5">
       <div className=" w-full flex gap-2 md:gap-3 items-center">
       <Search size={24} color="#667185" />
       <input

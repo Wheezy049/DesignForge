@@ -10,7 +10,9 @@ function Verification() {
 
         <div className='w-full max-w-[1200px] mx-auto px-4 mt-36 mb-24 block md:flex justify-center items-center gap-8'>
             <CodeForm />
-            <FormCard />
+            <div className="hidden md:block">
+        <FormCard />
+        </div>
         </div>
     </div>
   )
