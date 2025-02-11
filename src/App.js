@@ -12,9 +12,12 @@ const projects = [
     title: "AdVista",
     author: "Frianisnisu Doe",
     description:
-      "Develop a powerful ad performance dashboard where marketers can track campaign metrics, analyze engagement, and optimize ad spend in real time.",
+      "In today’s fast-paced business environment, companies rely on real-time data to optimize operations, track key performance indicators (KPIs), and stay ahead of market trends. This project focuses on designing a modern SaaS analytics dashboard that simplifies complex data visualization, making it easier for businesses to extract valuable insights without information overload. The goal is to create a clean, user-friendly dashboard UI that balances aesthetics with functionality. Users should be able to seamlessly navigate between multiple data views, customize their reports, and interact with visualized metrics such as revenue growth, customer retention, and operational efficiency. Your contributions will help shape a data-driven experience for B2B companies, enabling them to gain real-time insights through interactive graphs, trend analysis, and KPI monitoring.",
     date: "Jan 15, 2024",
-    projectImage: "/images/Frame 3 (1).png",
+    projectImage: [
+      "/images/Frame 3 (1).png",
+      "/images/Frame 3 (1).png"
+    ],
     profilePicture: "/images/Ellipse 2.svg",
     contributors: 29,
     contributorImages: [
@@ -31,7 +34,11 @@ const projects = [
     description:
       "Create an event discovery and ticketing app that allows users to browse events, book tickets, and network with attendees through in-app messaging.",
     date: "Jan 15, 2024",
-    projectImage: "/images/Frame 3 (7).png",
+    projectImage: [
+      "/images/Frame 3 (7).png",
+      "/images/Frame 3 (7).png"
+    ],
+  
     profilePicture: "/images/Ellipse 2.svg",
     contributors: 24,
     contributorImages: [
@@ -48,7 +55,10 @@ const projects = [
     description:
       "Develop a modern analytics dashboard for businesses to track KPIs, user behavior, and performance insights through interactive charts and reports.",
     date: "Jan 15, 2024",
-    projectImage: "/images/Frame 3 (3).png",
+    projectImage: [
+      "/images/Frame 3 (3).png",
+      "/images/Frame 3 (3).png"
+    ],
     profilePicture: "/images/Ellipse 2.svg",
     contributors: 18,
     contributorImages: [
@@ -65,7 +75,10 @@ const projects = [
     description:
       "Design a seamless personal finance app that helps users track expenses, set budgets, and visualize spending patterns with intuitive graphs.",
     date: "Jan 15, 2024",
-    projectImage: "/images/Frame 3 (4).png",
+    projectImage: [
+      "/images/Frame 3 (4).png",
+      "/images/Frame 3 (4).png"
+    ],
     profilePicture: "/images/Ellipse 2.svg",
     contributors: 15,
     contributorImages: [
@@ -82,7 +95,10 @@ const projects = [
     description:
       "Craft an engaging, accessible website for an online learning platform that simplifies course discovery, enrollment, and interactive learning experiences.",
     date: "Jan 15, 2024",
-    projectImage: "/images/Frame 3 (2).png",
+    projectImage: [
+      "/images/Frame 3 (5).png",
+      "/images/Frame 3 (5).png"
+    ],
     profilePicture: "/images/Ellipse 2.svg",
     contributors: 35,
     contributorImages: [
@@ -99,7 +115,10 @@ const projects = [
     description:
       "Create an intuitive user interface for an e-learning platform, focusing on improving course navigation and student engagement.",
     date: "Jan 15, 2024",
-    projectImage: "/images/Frame 3 (8).png",
+    projectImage: [
+      "/images/Frame 3 (8).png",
+      "/images/Frame 3 (8).png"
+    ],
     profilePicture: "/images/Ellipse 2.svg",
     contributors: 27,
     contributorImages: [
@@ -112,11 +131,14 @@ const projects = [
   {
     id: 7,
     title: "StockPulse",
-    author:  "Adeyemi Chukwu",
+    author: "Adeyemi Chukwu",
     description:
       "Develop a stock market dashboard that provides real-time financial data, trend analysis, and personalized watchlists for investors.",
     date: "Jan 15, 2024",
-    projectImage: "/images/Frame 3 (6).png",
+    projectImage: [
+      "/images/Frame 3 (6).png",
+      "/images/Frame 3 (6).png"
+    ],
     profilePicture: "/images/Ellipse 2.svg",
     contributors: 22,
     contributorImages: [
@@ -133,7 +155,10 @@ const projects = [
     description:
       "Create a startup landing page template that highlights product features, investor details, and a compelling call to action for early adopters.",
     date: "Jan 15, 2024",
-    projectImage: "/images/Frame 3 (4).png",
+    projectImage: [
+      "/images/Frame 3 (4).png",
+      "/images/Frame 3 (4).png"
+    ],
     profilePicture: "/images/Ellipse 2.svg",
     contributors: 17,
     contributorImages: [
@@ -150,7 +175,10 @@ const projects = [
     description:
       "Design a recruitment management dashboard for HR teams to track job applications, schedule interviews, and manage candidate pipelines efficiently.",
     date: "Jan 15, 2024",
-    projectImage: "/images/Frame 3 (2).png",
+    projectImage: [
+      "/images/Frame 3 (2).png",
+      "/images/Frame 3 (2).png"
+    ],
     profilePicture: "/images/Ellipse 2.svg",
     contributors: 12,
     contributorImages: [

@@ -44,7 +44,7 @@ function ProjectCard({ project }) {
         {/* Project Image */}
         <div className="w-full h-[200px] rounded-t-[16px] overflow-hidden">
           <img
-            src={projectImage}
+            src={projectImage[0]}
             alt={title}
             className="w-full h-full object-cover"
           />
