@@ -103,7 +103,7 @@ function ProjectCard({ project }) {
 
             {/* Tags */}
             <div className="flex gap-2 items-center mt-2">
-              {tags.map((tag, index) => {
+              {tags.slice(0, 2).map((tag, index) => {
                 const style =
                   shuffledTagStyles[index % shuffledTagStyles.length];
 

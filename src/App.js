@@ -25,7 +25,7 @@ const projects = [
       "/images/Ellipse 2 (2).svg",
       "/images/Ellipse 4.svg",
     ],
-    tags: ["Dashboard", "Brand Design"],
+    tags: ["Dashboard", "Brand Design", "Sass Dashboard", "UI Library", "Design Systems"],
   },
   {
     id: 2,
