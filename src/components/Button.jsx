@@ -6,11 +6,13 @@ const Button = ({
   iconSrc,
   iconAlt = "icon",
   onClick,
+  type = "button"
 }) => {
   const isDefaultBg = bgColor === "#181919";
 
   return (
     <button
+      type={type}
       className="flex items-center justify-center gap-2 px-6 py-4 text-base font-bold font-manrope rounded-lg hover:opacity-80 transition"
       style={{
         backgroundColor: bgColor,

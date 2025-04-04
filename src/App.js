@@ -1,10 +1,14 @@
 import React from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import HomePage from "./pages/HomePage";
 import ProjectDetail from "./pages/ProjectDetail";
 import SignUp from "./pages/Signup";
 import SignIn from "./pages/SignIn";
 import Verification from "./pages/Verification";
+import DashBoard from "./pages/DashBoard";
+import Profile from "./pages/Profile";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css"
 
 const projects = [
   {
@@ -192,7 +196,8 @@ const projects = [
 
 function App() {
   return (
-    <Router>
+    <>
+    <ToastContainer />
       <Routes>
         <Route path="/" element={<HomePage projects={projects} />} />
         <Route
@@ -201,9 +206,11 @@ function App() {
         />
         <Route path="/signup" element={<SignUp />} />
         <Route path="/signin" element={<SignIn />} />
-        <Route path="/verification-code" element={<Verification />} />
+        <Route path="/verification" element={<Verification />} />
+        <Route path="/profile" element={ <Profile />} />       
+        <Route path="/dashboard" element={<DashBoard projects={projects} />} />
       </Routes>
-    </Router>
+      </>
   );
 }
 

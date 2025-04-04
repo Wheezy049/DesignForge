@@ -1,8 +1,11 @@
 import React, { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 function NavBar() {
   const [isScrolled, setIsScrolled] = useState(false);
+  const location = useLocation();
+  const hiddenRoutes = ["/signup", "/signin", "/profile", "/verification"];
+  const shouldHideButtons = hiddenRoutes.includes(location.pathname);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -30,6 +33,7 @@ function NavBar() {
           <img src="/images/DesignForge (1).svg" alt="logo" className="block md:hidden" />
         </div>
         </Link>
+        {  !shouldHideButtons && (
         <div className="flex gap-2 md:gap-4 text-base font-bold">
           <Link to="/signin"><button className="flex justify-center px-4 py-2 md:px-6 md:py-3 items-center border border-[#1A1B1C] text-[#1A1B1C] rounded-lg hover:bg-[#f0f0f0] cursor-pointer transition-all duration-300">
             Login
@@ -40,6 +44,7 @@ function NavBar() {
           </button>
           </Link>
         </div>
+        )}
       </div>
     </div>
   );

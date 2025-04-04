@@ -146,13 +146,13 @@ function ProjectDetailCard({ project, handleContributeClick }) {
           className="w-full h-full object-cover"
         />
       </div>
-      <div className="hidden md:flex flex-col gap-8">
+      <div className="hidden md:flex flex-col gap-8 w-full">
         {projectImage.map((image, index) => (
           <img
             key={index}
             src={image}
             alt={project.title}
-            className="w-full h-[230px] md:w-auto rounded-lg"
+            className="w-full h-[400px] md:w-auto rounded-lg"
           />
         ))}
       </div>
