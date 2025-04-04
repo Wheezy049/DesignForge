@@ -13,11 +13,11 @@ function Profile() {
     }
   };
 
-  const handlePrevious = () => {
-    if (currentStep > 1) {
-      setCurrentStep(currentStep - 1);
-    }
-  };
+//   const handlePrevious = () => {
+//     if (currentStep > 1) {
+//       setCurrentStep(currentStep - 1);
+//     }
+//   };
 
   return (
     <div className="flex flex-col items-center bg-[#F4F4F5] min-h-screen">

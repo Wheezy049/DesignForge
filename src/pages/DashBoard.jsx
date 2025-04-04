@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { useAuth } from "../context/AuthContext";
+// import { useAuth } from "../context/AuthContext";
 import NavSidebar from "../components/NavSidebar";
 import Explore from "../components/Explore";
 
