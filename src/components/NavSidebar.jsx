@@ -1,6 +1,7 @@
 import React from 'react'
+import Button from './Button'
 
-function NavSidebar({ handleNavClick, projects, activeComponent } ) {
+function NavSidebar({ handleNavClick, projects, activeComponent, handleLogout } ) {
 
   const navItems = [
     { name: "Explore", icon: "/images/team_dashboard.svg", component: "Explore" },
@@ -26,7 +27,10 @@ function NavSidebar({ handleNavClick, projects, activeComponent } ) {
             <span>{item.name}</span>
           </button>
         ))}
-      </div>    
+      </div>  
+
+
+      <Button type='button' text="Logout" onClick={handleLogout} />
     </div>
   )
 }

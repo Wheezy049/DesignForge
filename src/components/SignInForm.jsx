@@ -10,6 +10,7 @@ import "react-toastify/dist/ReactToastify.css";
 
 function SignInForm() {
 
+  const [loading, setLoading] = useState(false);
   const { login } = useAuth();
   const [formData, setFormData] = useState({
     email: "",
@@ -23,10 +24,11 @@ function SignInForm() {
   // Handle form submission
   const handleSignIn = async (e) => {
     e.preventDefault();
+    setLoading(true);
   
     try {
       await login(formData);
-      toast.success("✅ Login successful.", {
+      toast.success("Login successful.", {
         position: "top-right",
         autoClose: 2000,
         hideProgressBar: true,
@@ -42,7 +44,7 @@ function SignInForm() {
         },
       });
     } catch (error) {
-      toast.error(error.message || "❌ Invalid credentials. Try again.", {
+      toast.error(error.message || "Invalid credentials. Try again.", {
         position: "top-right",
         autoClose: 2000,
         hideProgressBar: false,
@@ -57,6 +59,8 @@ function SignInForm() {
           borderRadius: "8px",
         },
       });
+    } finally{
+      setLoading(false);
     }
   };
   
@@ -87,7 +91,7 @@ function SignInForm() {
         value={formData.password}
         onChange={handleChange}
       />
-      <Button type="submit" text="Login into your account" />
+      <Button type="submit" text={ loading ? "Signing in..." : "Login into your accout"} disabled={loading}/>
       <span className="text-[#8A8A8B] text-base font-medium font-inter text-center">
         OR
       </span>

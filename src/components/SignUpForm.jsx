@@ -7,6 +7,9 @@ import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 function SignUpForm() {
+
+ const [loading, setLoading] = useState(false);
+
   const API_BASE_URL = "https://forge-api-5ubm.onrender.com/api/v1";
   const navigate = useNavigate();
   const [formData, setFormData] = useState({
@@ -20,6 +23,7 @@ function SignUpForm() {
 
   const handleSignUp = async (e) => {
     e.preventDefault();
+    setLoading(true);
 
     try {
       const response = await fetch(`${API_BASE_URL}/auth/register`, {
@@ -29,9 +33,10 @@ function SignUpForm() {
       });
 
       const data = await response.json();
+      console.log(data);
 
       if (response.ok) {
-        toast.success( data.message || "✅ Account created successfully! Please log in.", {
+        toast.success( data.message || "Account created successfully! Please log in.", {
           position: "top-right",
           autoClose: 2000,
           hideProgressBar: true,
@@ -46,12 +51,9 @@ function SignUpForm() {
             borderRadius: "8px",
           },
         });
-
-        setTimeout(() => {
-          navigate("/verification");
-        }, 1200);
+        navigate("/signin");
       } else {
-        toast.error(data.message || "❌ Sign-up failed. Try again.", {
+        toast.error(data.message || " Sign-up failed. Try again.", {
           position: "top-right",
           autoClose: 2000,
           hideProgressBar: false,
@@ -68,7 +70,7 @@ function SignUpForm() {
         });
       }
     } catch (error) {
-      toast.error("❌ Something went wrong. Please try again.", {
+      toast.error("Something went wrong. Please try again.", {
         position: "top-right",
         autoClose: 2000,
         hideProgressBar: false,
@@ -83,6 +85,8 @@ function SignUpForm() {
           borderRadius: "8px",
         },
       });
+    } finally{
+      setLoading(false);
     }
   };
 
@@ -111,7 +115,7 @@ function SignUpForm() {
         value={formData.password}
         onChange={handleChange}
       />
-      <Button type="submit" text="Continue with email" />
+      <Button type="submit" text={loading ? "Signing Up..." : "Continue with email"} disabled={loading}/>
       <span className="text-[#8A8A8B] text-base font-medium font-inter text-center">
         OR
       </span>
